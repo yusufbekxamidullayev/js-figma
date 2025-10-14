@@ -6,8 +6,8 @@ let lastFourProducts = products.slice(products.length - 7, products.length)
     .filter(el => el.discount > 0)
     .forEach(el => {
         productCards.innerHTML +=
-            `
-                   <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px] ">
+            `<a href="../товар.html.?id=${el.id}">
+                   <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px]">
                             <div class="relative">
                                 <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease" src="${el.images[3]}" alt="Молоко Простоквашино"
                                     class=" object-cover">
