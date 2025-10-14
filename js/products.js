@@ -7,76 +7,74 @@ let lastFourProducts = products.slice(products.length - 7, products.length)
     .forEach(el => {
         productCards.innerHTML +=
             `
-                            <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px]">
+                   <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px] ">
                             <div class="relative">
-                                <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease"
-                                    src="${el.images[0]}" alt="Молоко Простоквашино" class="object-cover">
-
-                                <div class="absolute top-5 left-2 bg-orange-500 text-white text-sm font-semibold px-2 py-1 rounded">
+                                <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease" src="${el.images[3]}" alt="Молоко Простоквашино"
+                                    class=" object-cover">
+                                    <div class="absolute top-5 left-2 bg-orange-500 text-white text-sm font-semibold px-2 py-1 rounded">
                                     -${el.discount}%
-                                </div>
                             </div>
+                            </div>
+                            
                             <div class="p-4">
                                 <h3 class="text-gray-600 text-lg ">
                                     ${el.description}
                                 </h3>
-
-                                <div class="flex items-baseline mb-4 ">
+                                <div class="flex items-baseline mb-4">
                                     <span class="text-xl font-bold text-gray-900 mr-2">${el.price} ₽</span>
-                                    <span class="text-sm line-through text-gray-400">${el.price - el.price * el.discount / 100} ₽</span>
                                 </div>
-                                ${el.rating === 5 ? `
-                                    <div class="flex items-center gap-[3px]">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
+                               ${el.rating === 5 ? `
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
                                 </div>` : el.rating === 4.5 ? `
-                                <div class="flex items-center gap-[3px]">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-half.png" alt="star">
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-half.png" alt="">
                                 </div>` : el.rating === 4 ? `
-                                <div class="flex items-center gap-[3px]">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
                                 </div>` : el.rating === 3.5 ? `
-                                <div class="flex items-center gap-[3px]">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-half.png" alt="star">
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-half.png" alt="">
                                 </div>` : el.rating === 3 ? `
-                                <div class="flex items-center gap-[3px]">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
                                 </div>` : el.rating === 2.5 ? `
-                                <div class="flex items-center gap-[3px]">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-half.png" alt="star">
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-half.png" alt="">
                                 </div>` : el.rating === 2 ? `
-                                <div class="flex items-center gap-[3px]">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-full.png" alt="star">
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
                                 </div>` : el.rating === 1.5 ? `
-                                <div class="flex items-center gap-[3px]">
-                                    <img src="/assets/image/star-full.png" alt="star">
-                                    <img src="/assets/image/star-half.png" alt="star">
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-half.png" alt="">
                                 </div>` : el.rating === 1 ? `
-                                <div class="flex items-center gap-[3px]">
-                                    <img src="/assets/image/star-full.png" alt="star">  
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
                                 </div>` : ""
 
             }
                                 <button
-                                    class="w-full mt-[10px] bg-green-600 hover:bg-[#FF6633] text-white font-semibold py-2 rounded transition-colors duration-500 ease-in-out">
+                                    class="mt-[10px] w-full bg-green-600 hover:bg-[#FF6633] text-white font-semibold py-2 rounded transition-colors duration-500 ease-in-out">
                                     <a href="">В корзину</a>
                                 </button>
                             </div>
@@ -94,7 +92,7 @@ let lastFourProduct = products.slice(products.length - 7, products.length)
     .filter(el => el.discount > 0)
     .forEach(el => {
         aboutCard.innerHTML +=
-        `
+            `
         <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px] ">
                             <div class="relative">
                                 <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease" src="${el.images[3]}" alt="Молоко Простоквашино"
@@ -156,7 +154,7 @@ let lastFourProduct = products.slice(products.length - 7, products.length)
                                     <img src="/assets/image/star-full.png" alt="">
                                 </div>` : ""
 
-                               }
+            }
                                 <button
                                     class="mt-[10px] w-full bg-green-600 hover:bg-[#FF6633] text-white font-semibold py-2 rounded transition-colors duration-500 ease-in-out">
                                     <a href="">В корзину</a>
@@ -167,7 +165,7 @@ let lastFourProduct = products.slice(products.length - 7, products.length)
     });
 
 
-let sectionCards =  document.querySelector(".section-cards")
+let sectionCards = document.querySelector(".section-cards")
 
 let sectionFilter = products.filter(el => el.discount > 0)
 let lastFourCards = products.slice(products.length - 7, products.length)
@@ -175,7 +173,7 @@ let lastFourCards = products.slice(products.length - 7, products.length)
     .filter(el => el.discount > 0)
     .forEach(el => {
         sectionCards.innerHTML +=
-        `
+            `
         <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px] ">
                         <div class="relative">
                             <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease" src="${el.images[2]}" alt="Молоко Простоквашино" class=" object-cover">
@@ -236,7 +234,108 @@ let lastFourCards = products.slice(products.length - 7, products.length)
                                     <img src="/assets/image/star-full.png" alt="">
                                 </div>` : ""
 
+            }
+                            <button class="mt-[10px] w-full bg-green-600 hover:bg-[#FF6633] text-white font-semibold py-2 rounded transition-colors duration-500 ease-in-out">
+                                <a href="">В корзину</a>
+                            </button>
+                        </div>
+                    </div>
+        `
+    })
+
+let path = new URLSearchParams(window.location.search)
+
+let id = path.get("id")
+
+let singleProduct = document.querySelector(".single-products")
+
+let idProduct = products.filter((el) => el.id == id);
+
+idProduct.map((el) => {
+    singleProduct.innerHTML += `
+    <div class="single-product pt-[15px] flex flex-col gap-[40px] lg:flex lg:flex-row">
+                    <div class="flex  gap-[20px]">
+                        <div class="flex flex-col items-center gap-[5px]">
+                            ${
+                                el.images.map(() => {
+                                    return `<img class="w-[100px] object-cover " src="${el}" alt="">`
+                                }).join(" ")
                             }
+                        </div>
+                        <img class="w-[350px]" src="${el.images[0]}" alt="">
+                    </div>
+    </div>                
+    `
+})
+
+
+let productCard = document.querySelector(".product-card")
+
+let FourProduct = products.slice(products.length - 7, products.length)
+
+    .forEach(el => {
+        productCard.innerHTML += `
+        <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px] ">
+                        <div class="relative">
+                            <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease" src="${el.images[2]}" alt="Молоко Простоквашино" class=" object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-gray-600 text-lg">
+                                ${el.description}
+                            </h3> 
+                            <div class="flex items-baseline mb-4">
+                                <span class="text-xl font-bold text-gray-900 mr-2">${el.price}₽</span>
+                            </div>
+                            ${el.rating === 5 ? `
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                </div>` : el.rating === 4.5 ? `
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-half.png" alt="">
+                                </div>` : el.rating === 4 ? `
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                </div>` : el.rating === 3.5 ? `
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-half.png" alt="">
+                                </div>` : el.rating === 3 ? `
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                </div>` : el.rating === 2.5 ? `
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-half.png" alt="">
+                                </div>` : el.rating === 2 ? `
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                </div>` : el.rating === 1.5 ? `
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-half.png" alt="">
+                                </div>` : el.rating === 1 ? `
+                                 <div class="flex items-center gap-[3px]">
+                                    <img src="/assets/image/star-full.png" alt="">
+                                </div>` : ""
+
+            }
                             <button class="mt-[10px] w-full bg-green-600 hover:bg-[#FF6633] text-white font-semibold py-2 rounded transition-colors duration-500 ease-in-out">
                                 <a href="">В корзину</a>
                             </button>
