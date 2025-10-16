@@ -11,9 +11,15 @@
 
 <body>
 
-    <header class="shadow-sm">
-        <div class="container mx-auto px-4">
-            <div class="fixed top-0 left-0 right-0 bg-[white] z-[100] py-[15px] flex items-center justify-between py-3 gap-3 pl-[10px] pr-[10px] lg:hidden">
+
+    <div id="loading" class="fixed w-full h-full z-[5] ">
+        <img class="w-full h-full" src="/assets/image/Spinner@1x-1.0s-200px-200px.svg" alt="">
+    </div>
+
+    <header class="shadow-sm ">
+        <div class="container mx-auto px-4 ">
+            <div
+                class="fixed top-0 left-0 right-0 bg-[white] z-[3] py-[15px] flex items-center justify-between py-3 gap-3 pl-[10px] pr-[10px] lg:hidden">
                 <div class="flex items-center gap-2">
                     <img src="/assets/image/logo.png" alt="yuz" class="w-8 h-8">
                 </div>
@@ -26,14 +32,15 @@
                 </div>
             </div>
 
-            <div class="hidden lg:flex flex-wrap items-center justify-between py-4 gap-4 fixed top-0 left-0 right-0 bg-[white] z-[100] pl-[20px] pr-[20px]">
+            <div
+                class="hidden lg:flex flex-wrap items-center justify-between py-4 gap-4 fixed top-0 left-0 right-0 bg-[white] z-[100] pl-[20px] pr-[20px]">
                 <div class="flex items-center gap-3">
                     <img src="/assets/image/logo.png" alt="yuz" class="w-8 h-8">
                     <h1 class="font-bold text-lg sm:text-xl">Северяночка</h1>
                 </div>
 
                 <div>
-                    <button
+                    <button id="toggleBtn"
                         class="flex items-center gap-2 rounded-md w-[140px] h-[40px] bg-[#70C05B] text-white justify-center">
                         <img src="/assets/image/menu1.png" alt="menu" class="w-5 h-5">
                         <a href="/каталог.html">
@@ -69,7 +76,7 @@
             </div>
         </div>
     </header>
-    
+
 
     <main>
         <section class="bg-[url('/assets/image/bg.png')] bg-cover bg-center h-[0px] sm:w-full h-[350px]">
@@ -78,11 +85,12 @@
                     <img class="hidden  sm:w-[250px] md:block md:w-[400px]" src="/assets/image/bg1.png" alt="bg">
                 </div>
                 <div>
-                    <h1 class="text-[28px] text-center text-[#414141] font-bold sm:text-[48px] ">Доставка бесплатно от 1000 ₽</h1>
+                    <h1 class="text-[28px] text-center text-[#414141] font-bold sm:text-[48px] ">Доставка бесплатно от
+                        1000 ₽</h1>
                 </div>
             </div>
         </section>
-        <section class="pt-[70px] pl-[50px] "> 
+        <section class="pt-[70px] pl-[50px] ">
 
             <div class="container mx-auto">
                 <div class="flex justify-between sm:flex items-center justify-between pr-[50px]">
@@ -92,7 +100,8 @@
                         <img src="/assets/image/o'ngga.png" alt="">
                     </div>
                 </div>
-                <div class="cards flex flex-col items-center justify-center text-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:flex xl:flex-row gap-[30px]">
+                <div
+                    class="cards flex flex-col items-center justify-center text-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:flex xl:flex-row gap-[30px]">
 
 
                 </div>
@@ -109,12 +118,13 @@
                     </div>
                 </div>
                 <div>
-                    <div class="about-cards flex flex-col items-center justify-center text-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:flex xl:flex-row gap-[30px]">
+                    <div
+                        class="about-cards flex flex-col items-center justify-center text-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:flex xl:flex-row gap-[30px]">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="pt-[90px] pl-[50px]" >
+        <section class="pt-[90px] pl-[50px]">
             <div class="container mx-auto">
                 <div class="flex flex-col justify-between sm:flex-row items-center justify-between pr-[51px]">
                     <h1 class="font-bold text-[30px] text-[#414141] sm: text-[36px] ">Покупали раньше</h1>
@@ -123,10 +133,11 @@
                         <img src="/assets/image/o'ngga.png" alt="">
                     </div>
                 </div>
-                <div class="section-cards flex flex-col items-center justify-center text-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:flex xl:flex-row gap-[30px]">
+                <div
+                    class="section-cards flex flex-col items-center justify-center text-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:flex xl:flex-row gap-[30px]">
                 </div>
             </div>
-        </section> 
+        </section>
 
         <section class="pt-[90px] pl-[50px]">
             <div class="container mx-auto">
@@ -245,10 +256,8 @@
                 <!-- <div class="cards flex flex-col items-center justify-center text-center md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div> -->
 
             </div>
-        </section> 
+        </section>
     </main>
-
-
 
     <footer class="mt-[50px] bg-[#F9F5E3] px-4 md:px-8 lg:px-16 py-8">
         <div
@@ -280,10 +289,14 @@
             </div>
         </div>
         <div class="container mx-auto">
-            <div class="fixed bottom-0 left-0  flex items-center justify-center gap-6  bg-[white] w-full py-[15px]  sm:hidden">
-                <div class="flex flex-col items-center">
-                    <img src="/assets/image/menu.png" alt="menu" class="w-5 h-5">
-                    <p class="text-xs">Каталог</p>
+            <div
+                class="fixed bottom-0 left-0 z-[100] flex items-center justify-center gap-6  bg-[white] w-full py-[15px]  sm:hidden">
+
+                <div>
+                    <a class="flex flex-col items-center" href="">
+                        <img src="/assets/image/menu.png" alt="menu" class="w-5 h-5">
+                        <a class="text-xs" href="">Каталог</a>
+                    </a>
                 </div>
                 <div class="flex flex-col items-center">
                     <img src="/assets/image/yurak.png" alt="yurak" class="w-5 h-5">
@@ -304,10 +317,63 @@
         </div>
     </footer>
 
+    <div id="toggleBtn" class="pb-[100px]">
+        <a class="flex flex-col items-center" href="">
+            <img src="/assets/image/menu.png" alt="menu" class="w-5 h-5">
+            <a class="text-xs" href="">Каталог</a>
+        </a>
+    </div>
 
+
+    <div id="res-menu" class="translate-y-[-100%] fixed top-0 left-0 z-[2] w-[100%] transform duration-500 pb-[30px]  bg-[white] pt-[80px] ">
+        <ul 
+            class="container mx-auto grid grid-cols-4 gap-[20px]">
+            <li>
+                <a class="text-[20px] text-[black] font-bold" href="">Молоко, сыр, яйцо</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold" href="">Хлеб</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold" href="">Фрукты и овощи</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold" href="">Замороженные продукты</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold" href="">Напитки</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold" href="">Кондитерские изделия</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold" href="">Чай, кофе</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold" href="">Чай, кофе</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold" href="">Здоровое питание</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold" href="">Зоотовары</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold" href="">Непродовольственные товары</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold" href="">Детское питание</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold" href="">Мясо, птица, колбаса</a>
+            </li>
+        </ul>
+    </div>
 
     <script src="/js/products-data.js"></script>
+    <script src="/js/card.js"></script>
     <script src="/js/products.js"></script>
+    <script src="/js/toogle.js"></script>
     <script src="/js/main.js"></script>
 </body>
 

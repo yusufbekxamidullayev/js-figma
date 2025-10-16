@@ -6,7 +6,7 @@ let lastFourProducts = products.slice(products.length - 7, products.length)
     .filter(el => el.discount > 0)
     .forEach(el => {
         productCards.innerHTML +=
-            `<a href="../товар.html.?id=${el.id}">
+            `<a href="../товар.html?id=${el.id}">
                    <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px]">
                             <div class="relative">
                                 <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease" src="${el.images[3]}" alt="Молоко Простоквашино"
@@ -81,6 +81,10 @@ let lastFourProducts = products.slice(products.length - 7, products.length)
                         </div>
     `
     })
+
+   
+
+
 
 
 
@@ -164,7 +168,10 @@ let lastFourProduct = products.slice(products.length - 7, products.length)
         `
     });
 
+    
 
+
+    
 let sectionCards = document.querySelector(".section-cards")
 
 let sectionFilter = products.filter(el => el.discount > 0)
@@ -243,30 +250,7 @@ let lastFourCards = products.slice(products.length - 7, products.length)
         `
     })
 
-let path = new URLSearchParams(window.location.search)
 
-let id = path.get("id")
-
-let singleProduct = document.querySelector(".single-products")
-
-let idProduct = products.filter((el) => el.id == id);
-
-idProduct.map((el) => {
-    singleProduct.innerHTML += `
-    <div class="single-product pt-[15px] flex flex-col gap-[40px] lg:flex lg:flex-row">
-                    <div class="flex  gap-[20px]">
-                        <div class="flex flex-col items-center gap-[5px]">
-                            ${
-                                el.images.map(() => {
-                                    return `<img class="w-[100px] object-cover " src="${el}" alt="">`
-                                }).join(" ")
-                            }
-                        </div>
-                        <img class="w-[350px]" src="${el.images[0]}" alt="">
-                    </div>
-    </div>                
-    `
-})
 
 
 let productCard = document.querySelector(".product-card")
