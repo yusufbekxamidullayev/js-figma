@@ -94,7 +94,7 @@ let idProduct = products.filter((el) => el.id == id);
 
 idProduct.map((el) => {
     singleProduct.innerHTML += `
-                    <div class="flex  gap-[20px]">
+                    <div class="flex  gap-[20px] mt-[50px]">
                         <div class="flex flex-col items-center gap-[5px]">
                             ${
                                 el.images.map((el) => {
