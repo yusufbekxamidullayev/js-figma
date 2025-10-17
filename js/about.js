@@ -1,21 +1,17 @@
-let productCards = document.querySelector(".cards")
+let aboutCard = document.querySelector(".about-cards");
 
-let productFilter = products.filter(el => el.discount > 0)
-let lastFourProducts = products.slice(products.length - 7, products.length)
+let aboutFilter = products.filter(el => el.discount > 0)
+let lastFourProduct = products.slice(products.length - 7, products.length)
 
     .filter(el => el.discount > 0)
     .forEach(el => {
-        productCards.innerHTML +=
-            `<a href="../товар.html?id=${el.id}">
-                   <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px]">
+        aboutCard.innerHTML +=
+            `
+        <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px] ">
                             <div class="relative">
-                                <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease" src="${el.images[3]}" alt="Молоко Простоквашино"
+                                <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease" src="${el.images[2]}" alt="Молоко Простоквашино"
                                     class=" object-cover">
-                                    <div class="absolute top-5 left-2 bg-orange-500 text-white text-sm font-semibold px-2 py-1 rounded">
-                                    -${el.discount}%
                             </div>
-                            </div>
-                            
                             <div class="p-4">
                                 <h3 class="text-gray-600 text-lg ">
                                     ${el.description}
@@ -79,20 +75,20 @@ let lastFourProducts = products.slice(products.length - 7, products.length)
                                 </button>
                             </div>
                         </div>
-    `
-    })
-
-   
-    
+        `
+    });
 
 
 
-let productCard = document.querySelector(".product-card")
+let sectionCards = document.querySelector(".section-cards")
 
-let FourProduct = products.slice(products.length - 7, products.length)
+let sectionFilter = products.filter(el => el.discount > 0)
+let lastFourCards = products.slice(products.length - 7, products.length)
 
+    .filter(el => el.discount > 0)
     .forEach(el => {
-        productCard.innerHTML += `
+        sectionCards.innerHTML +=
+            `
         <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px] ">
                         <div class="relative">
                             <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease" src="${el.images[2]}" alt="Молоко Простоквашино" class=" object-cover">
@@ -100,7 +96,7 @@ let FourProduct = products.slice(products.length - 7, products.length)
                         <div class="p-4">
                             <h3 class="text-gray-600 text-lg">
                                 ${el.description}
-                            </h3> 
+                            </h3>
                             <div class="flex items-baseline mb-4">
                                 <span class="text-xl font-bold text-gray-900 mr-2">${el.price}₽</span>
                             </div>
@@ -161,3 +157,4 @@ let FourProduct = products.slice(products.length - 7, products.length)
                     </div>
         `
     })
+
