@@ -16,72 +16,72 @@
     </div>
 
 
-    <header>
-        <div class="container mx-auto">
-            <header class="shadow-sm">
-                <div class="container mx-auto px-4">
-                    <div class="flex items-center justify-between py-3 gap-3 lg:hidden">
-                        <div class="flex items-center gap-2">
-                            <img src="/assets/image/logo.png" alt="yuz" class="w-8 h-8">
-                        </div>
-                        <div class="flex-grow relative">
-                            <input type="text" placeholder="Найти товар"
-                                class="w-full pl-4 pr-10 py-2 border border-green-500 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
-                            <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
-                                <img src="/assets/images/search.png" alt="search" class="w-5 h-5">
-                            </button>
-                        </div>
+    <header class="shadow-sm ">
+        <div class="container mx-auto px-4 ">
+            <div
+                class="fixed top-0 left-0 right-0 bg-[white] z-[3] py-[15px] flex items-center justify-between py-3 gap-3 pl-[10px] pr-[10px] lg:hidden">
+                <div class="flex items-center gap-2">
+                    <img src="/assets/image/logo.png" alt="yuz" class="w-8 h-8">
+                </div>
+                <div class="flex-grow relative">
+                    <input type="text" placeholder="Найти товар"
+                        class="w-full pl-4 pr-10 py-2 border border-green-500 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
+                    <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                        <img src="/assets/image/search.png" alt="search" class="w-5 h-5">
+                    </button>
+                </div>
+            </div>
+    
+            <div
+                class="hidden lg:flex flex-wrap items-center justify-between py-4 gap-4 fixed top-0 left-0 right-0 bg-[white] z-[100] pl-[20px] pr-[20px]">
+                <a class="flex items-center gap-3" href="/index.html">
+                    <img src="/assets/image/logo.png" alt="yuz" class="w-8 h-8">
+                    <h1 class="font-bold text-lg sm:text-xl">Северяночка</h1>
+                </a>
+                    
+                
+    
+                <div>
+                    <button id="toggleBtn"
+                        class="flex items-center gap-2 rounded-md w-[140px] h-[40px] bg-[#70C05B] text-white justify-center">
+                        <img src="/assets/image/menu1.png" alt="menu" class="w-5 h-5">
+                        <a href="/каталог.html">
+                            <span>Каталог</span>
+                        </a>
+                    </button>
+                </div>
+    
+                <div class="flex-grow max-w-[360px]">
+                    <input type="text" placeholder="Найти товар"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
+                </div>
+    
+                <div class="flex items-center gap-6">
+                    <div class="flex flex-col items-center">
+                        <img src="/assets/image/yurak.png" alt="yurak" class="w-5 h-5">
+                        <p class="text-xs">Избранное</p>
                     </div>
-
-                    <div class="hidden lg:flex flex-wrap items-center justify-between py-4 gap-4">
-                        <div class="flex items-center gap-3">
-                            <a href="/index.html">
-                                <img src="/assets/image/logo.png" alt="yuz" class="w-8 h-8">
-                            </a>
-                            <a href="/index.html">
-                                <h1 class="font-bold text-lg sm:text-xl">Северяночка</h1>
-                            </a>
-                        </div>
-
-                        <div>
-                            <button
-                                class="flex items-center gap-2 rounded-md w-[140px] h-[40px] bg-[#70C05B] text-white justify-center">
-                                <img src="/assets/image/menu1.png" alt="menu" class="w-5 h-5">
-                                <span>Каталог</span>
-                            </button>
-                        </div>
-
-                        <div class="flex-grow max-w-[360px]">
-                            <input type="text" placeholder="Найти товар"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
-                        </div>
-
-                        <div class="flex items-center gap-6">
-                            <div class="flex flex-col items-center">
-                                <img src="/assets/image/yurak.png" alt="yurak" class="w-5 h-5">
-                                <p class="text-xs">Избранное</p>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <img src="/assets/image/karobka.png" alt="karobka" class="w-5 h-5">
-                                <p class="text-xs">продукты</p>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <img src="/assets/image/savat.png" alt="savat" class="w-5 h-5">
-                                <p class="text-xs">Корзина</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-2">
-                            <img src="/assets/image/avatar (1).png" alt="avatar" class="w-8 h-8 rounded-full">
-                            <p class="text-sm sm:text-base text-[#232323]">Алексей</p>
-                        </div>
+                    <div class="flex flex-col items-center">
+                        <img src="/assets/image/karobka.png" alt="karobka" class="w-5 h-5">
+                        <p class="text-xs">продукты</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <a class="flex flex-col items-center" href="/cart.html">
+                            <img src="/assets/image/savat.png" alt="savat" class="w-5 h-5">
+                            <p class="text-xs">Корзина</p>
+                        </a>
                     </div>
                 </div>
-            </header>
+    
+                <div class="flex items-center gap-2">
+                    <img src="/assets/image/avatar (1).png" alt="avatar" class="w-8 h-8 rounded-full">
+                    <p class="text-sm sm:text-base text-[#232323]">Алексей</p>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main>
+    <main class="pt-[80px]">
         <section>
             <div class="container mx-auto">
                 <div class="flex items-center gap-[15px] pt-[20px]">
@@ -104,8 +104,8 @@
                     <h1 class="text-[24px] text-[#414141] font-bold pt-[20px]">Масло ПРОСТОКВАШИНО сливочное в/с 82%
                         фольга без змж, Россия, 180 г</h1>
                 </div>
-                <div class="flex items-center gap-[20px] pt-[15px]">
-                    <div>
+                <div class="star-card flex items-center gap-[20px] pt-[15px]">
+                    <!-- <div>
                         <p class="text-[12px] text-[#414141]">арт. 371431</p>
                     </div>
                     <div class="flex items-center gap-[3px]">
@@ -120,7 +120,7 @@
                     <div class="flex items-center gap-[8px]">
                         <img src="/assets/image/yurak.png" alt="">
                         <p class="text-[12px] text-[#606060]">В избраное</p>
-                    </div>
+                    </div> -->
                 </div>
                 <div  class="single-product">
 
@@ -211,9 +211,56 @@
         </div>
     </footer>
 
+
+    <div id="res-menu"
+        class="translate-y-[-100%] fixed top-0 left-0 z-[2] w-[100%] transform duration-500 pb-[30px]  bg-[white] pt-[80px] ">
+        <ul class="container mx-auto grid grid-cols-4 gap-[20px]">
+            <li>
+                <a class="text-[20px] text-[black] font-bold hover:text-[orange]" href="">Молоко, сыр, яйцо</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold hover:text-[orange]" href="">Хлеб</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold hover:text-[orange]" href="">Фрукты и овощи</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold hover:text-[orange]" href="">Замороженные продукты</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold hover:text-[orange]" href="">Напитки</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold hover:text-[orange]" href="">Кондитерские изделия</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold hover:text-[orange]" href="">Чай, кофе</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold hover:text-[orange]" href="">Чай, кофе</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold hover:text-[orange]" href="">Здоровое питание</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold hover:text-[orange]" href="">Зоотовары</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold hover:text-[orange]" href="">Непродовольственные товары</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold hover:text-[orange]" href="">Детское питание</a>
+            </li>
+            <li>
+                <a class="text-[20px] text-[black] font-bold hover:text-[orange]" href="">Мясо, птица, колбаса</a>
+            </li>
+        </ul>
+    </div>
+
     <script src="/js/products-data.js"></script>
     <script src="/js/card.js"></script>
     <script src="/js/products.js"></script>
+    <script src="/js/toogle.js"></script>
     <script src="/js/main.js"></script>
 </body>
 

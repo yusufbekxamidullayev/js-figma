@@ -4,19 +4,25 @@ let aboutFilter = products.filter(el => el.discount > 0)
 let lastFourProduct = products.slice(products.length - 7, products.length)
 
     .filter(el => el.discount > 0)
-    .forEach(el => {
+    .forEach(el => {    
         aboutCard.innerHTML +=
-            `
-        <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px] ">
+           `
+           <div class="max-w-[350px] w-full h-[400px] bg-white rounded-lg shadow overflow-hidden mt-[30px]">
+                <a href="../товар.html?id=${el.id}">
+                   <div class="">
                             <div class="relative">
                                 <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease" src="${el.images[2]}" alt="Молоко Простоквашино"
                                     class=" object-cover">
+                                    <div class="absolute top-5 left-2 bg-orange-500 text-white text-sm font-semibold px-2 py-1 rounded">
+                                    -${el.discount}%
                             </div>
+                            </div>
+                            
                             <div class="p-4">
-                                <h3 class="text-gray-600 text-lg ">
+                                <h3 class="text-gray-600 text-lg line-clamp-[2]">
                                     ${el.description}
                                 </h3>
-                                <div class="flex items-baseline mb-4">
+                                <div class="flex items-baseline mb-[10px]">
                                     <span class="text-xl font-bold text-gray-900 mr-2">${el.price} ₽</span>
                                 </div>
                                ${el.rating === 5 ? `
@@ -56,9 +62,9 @@ let lastFourProduct = products.slice(products.length - 7, products.length)
                                     <img src="/assets/image/star-full.png" alt="">
                                     <img src="/assets/image/star-half.png" alt="">
                                 </div>` : el.rating === 2 ? `
-                                 <div class="flex items-center gap-[3px]">
+                                 <div class="flex items-center gap-[3px]">          
                                     <img src="/assets/image/star-full.png" alt="">
-                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">  
                                 </div>` : el.rating === 1.5 ? `
                                  <div class="flex items-center gap-[3px]">
                                     <img src="/assets/image/star-full.png" alt="">
@@ -70,12 +76,14 @@ let lastFourProduct = products.slice(products.length - 7, products.length)
 
             }
                                 <button
-                                    class="mt-[10px] w-full bg-green-600 hover:bg-[#FF6633] text-white font-semibold py-2 rounded transition-colors duration-500 ease-in-out">
+                                    class="mt-[20px] w-full bg-green-600 hover:bg-[#FF6633] text-white font-semibold py-2 rounded transition-colors duration-500 ease-in-out">
                                     <a href="">В корзину</a>
                                 </button>
                             </div>
-                        </div>
-        `
+                    </div>
+             </a>           
+            </div>
+           `
     });
 
 
@@ -88,19 +96,26 @@ let lastFourCards = products.slice(products.length - 7, products.length)
     .filter(el => el.discount > 0)
     .forEach(el => {
         sectionCards.innerHTML +=
-            `
-        <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px] ">
-                        <div class="relative">
-                            <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease" src="${el.images[2]}" alt="Молоко Простоквашино" class=" object-cover">
-                        </div>
-                        <div class="p-4">
-                            <h3 class="text-gray-600 text-lg">
-                                ${el.description}
-                            </h3>
-                            <div class="flex items-baseline mb-4">
-                                <span class="text-xl font-bold text-gray-900 mr-2">${el.price}₽</span>
+           `
+           <div class="max-w-[350px] w-full h-[400px] bg-white rounded-lg shadow overflow-hidden mt-[30px]">
+                <a href="../товар.html?id=${el.id}">
+                   <div class="">
+                            <div class="relative">
+                                <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease" src="${el.images[1]}" alt="Молоко Простоквашино"
+                                    class=" object-cover">
+                                    <div class="absolute top-5 left-2 bg-orange-500 text-white text-sm font-semibold px-2 py-1 rounded">
+                                    -${el.discount}%
                             </div>
-                            ${el.rating === 5 ? `
+                            </div>
+                            
+                            <div class="p-4">
+                                <h3 class="text-gray-600 text-lg line-clamp-[2]">
+                                    ${el.description}
+                                </h3>
+                                <div class="flex items-baseline mb-[10px]">
+                                    <span class="text-xl font-bold text-gray-900 mr-2">${el.price} ₽</span>
+                                </div>
+                               ${el.rating === 5 ? `
                                  <div class="flex items-center gap-[3px]">
                                     <img src="/assets/image/star-full.png" alt="">
                                     <img src="/assets/image/star-full.png" alt="">
@@ -137,9 +152,9 @@ let lastFourCards = products.slice(products.length - 7, products.length)
                                     <img src="/assets/image/star-full.png" alt="">
                                     <img src="/assets/image/star-half.png" alt="">
                                 </div>` : el.rating === 2 ? `
-                                 <div class="flex items-center gap-[3px]">
+                                 <div class="flex items-center gap-[3px]">          
                                     <img src="/assets/image/star-full.png" alt="">
-                                    <img src="/assets/image/star-full.png" alt="">
+                                    <img src="/assets/image/star-full.png" alt="">  
                                 </div>` : el.rating === 1.5 ? `
                                  <div class="flex items-center gap-[3px]">
                                     <img src="/assets/image/star-full.png" alt="">
@@ -150,11 +165,14 @@ let lastFourCards = products.slice(products.length - 7, products.length)
                                 </div>` : ""
 
             }
-                            <button class="mt-[10px] w-full bg-green-600 hover:bg-[#FF6633] text-white font-semibold py-2 rounded transition-colors duration-500 ease-in-out">
-                                <a href="">В корзину</a>
-                            </button>
-                        </div>
+                                <button
+                                    class="mt-[20px] w-full bg-green-600 hover:bg-[#FF6633] text-white font-semibold py-2 rounded transition-colors duration-500 ease-in-out">
+                                    <a href="">В корзину</a>
+                                </button>
+                            </div>
                     </div>
-        `
+             </a>           
+            </div>
+           `
     })
 

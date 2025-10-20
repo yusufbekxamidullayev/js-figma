@@ -49,9 +49,16 @@
                     </button>
                 </div>
 
-                <div class="flex-grow max-w-[360px]">
-                    <input type="text" placeholder="Найти товар"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
+                <div class="flex items-center border border-[#70C05B] relative rounded-md flex-grow max-w-[400px]">
+                    <input id="search" type="text" placeholder="Найти товар"
+                        class="px-5 py-3 text-[18px] flex-grow min-w-0 outline-none border-none rounded-l-md">
+                    <div
+                        class="search-cards w-full pl-[10px] absolute flex flex-col gap-[10px] top-[60px] bg-white border-[2px] border-gray-300 rounded-[10px] py-2 pr-10 max-h-[300px] overflow-y-auto ">
+                
+                    </div>
+                    <button class="px-3 rounded-r-md">
+                        <img src="/assets/image/search.png" alt="search" class="w-6 h-6">
+                    </button>
                 </div>
 
                 <div class="flex items-center gap-6">
@@ -64,8 +71,17 @@
                         <p class="text-xs">продукты</p>
                     </div>
                     <div class="flex flex-col items-center">
-                        <img src="/assets/image/savat.png" alt="savat" class="w-5 h-5">
-                        <p class="text-xs">Корзина</p>
+                        <a class="flex flex-col items-center" href="/cart.html">
+                            <div class="flex items-center gap-[3px]">
+                                <img src="/assets/image/savat.png" alt="savat" class="w-5 h-5">
+                                <p id="badge"
+                                    class="text-[12px] bg-[red] text-[white] h-[18px] w-[18px] items-center text-center rounded-[100px]">
+                                    0</p>
+                            </div>
+                            <div>
+                                <p class="text-xs">Корзина</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
@@ -90,10 +106,10 @@
                 </div>
             </div>
         </section>
-        <section class="pt-[70px] pl-[50px] ">
+        <section class="pt-[70px] px-[20px]">
 
             <div class="container mx-auto">
-                <div class="flex justify-between sm:flex items-center justify-between pr-[50px]">
+                <div class="flex flex-col justify-between sm:flex-row items-center justify-between pr-[50px]">
                     <h1 class=" font-bold text-[30px] text-[#414141] sm: text-[36px] ">Акции</h1>
                     <div class="flex items-center gap-[10px]">
                         <a class="text-[16px] text-[#757371]" href="/все-продукты.html">Все продукты</a>
@@ -108,7 +124,7 @@
             </div>
             </div>
         </section>
-        <section class="pt-[90px] pl-[50px]">
+        <section class="pt-[90px] px-[20px]">
             <div class="container mx-auto">
                 <div class="flex flex-col justify-between sm:flex-row items-center justify-between pr-[50px]">
                     <h1 class=" font-bold text-[30px] text-[#414141] sm: text-[36px] ">Новинки</h1>
@@ -118,13 +134,14 @@
                     </div>
                 </div>
                 <div>
-                    <div class="about-cards flex flex-col items-center justify-center text-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:flex xl:flex-row gap-[30px]">
+                    <div
+                        class="about-cards flex flex-col items-center justify-center text-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:flex xl:flex-row gap-[30px]">
 
                     </div>
                 </div>
             </div>
         </section>
-        <section class="pt-[90px] pl-[50px]">
+        <section class="pt-[90px] px-[20px]">
             <div class="container mx-auto">
                 <div class="flex flex-col justify-between sm:flex-row items-center justify-between pr-[51px]">
                     <h1 class="font-bold text-[30px] text-[#414141] sm: text-[36px] ">Покупали раньше</h1>
@@ -133,11 +150,12 @@
                         <img src="/assets/image/o'ngga.png" alt="">
                     </div>
                 </div>
-                <div class="section-cards flex flex-col items-center justify-center text-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:flex xl:flex-row gap-[30px]">
+                <div
+                    class="section-cards flex flex-col items-center justify-center text-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:flex xl:flex-row gap-[30px]">
                 </div>
             </div>
         </section>
-        <section class="pt-[90px] pl-[50px]">
+        <section class="pt-[90px] px-[20px]">
             <div class="container mx-auto">
                 <h1 class="font-bold text-[30px] text-[#414141] sm: text-[36px] ">Специальные предложения</h1>
                 <div class="pt-[50px] flex flex-col items-center xl:flex justify-center  xl:flex-row gap-[30px]">
@@ -167,7 +185,7 @@
                 </div>
             </div>
         </section>
-        <section class="pt-[50px]">
+        <section class="pt-[50px] px-[20px]">
             <div class="container mx-auto">
                 <div style="position:relative;overflow:hidden; width: 100%;"><a
                         href="https://yandex.uz/maps/10335/tashkent/?utm_medium=mapframe&utm_source=maps"
@@ -182,7 +200,7 @@
                 </div>
             </div>
         </section>
-        <section class="pt-[70px] pl-[50px]">
+        <section class="pt-[70px] px-[20px]">
             <div class="container mx-auto">
                 <div class="flex justify-between sm:flex items-center justify-between pr-[50px] pb-[40px]">
                     <h1 class=" font-bold text-[30px] text-[#414141] sm: text-[36px] ">Статьи</h1>
@@ -362,6 +380,7 @@
     </div>
 
     <script src="/js/products-data.js"></script>
+    <script src="/js/search.js"></script>
     <script src="/js/card.js"></script>
     <script src="/js/products.js"></script>
     <script src="/js/about.js"></script>
