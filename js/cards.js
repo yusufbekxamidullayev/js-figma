@@ -72,3 +72,10 @@ let FourProducts = products.slice(products.length - 36, products.length)
                     </div>
         `
     })
+
+
+let loadingScreen = document.getElementById("loading");
+
+window.addEventListener("load", function () {
+    loadingScreen.classList.add("hidden")
+})
