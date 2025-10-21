@@ -1,18 +1,15 @@
-$('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    responsive: {
-        0: {
-            items: 1
-        },
-        600: {
-            items: 3
-        },
-        1000: {
-            items: 4
-        }
-    }
+let toggleBtn = document.getElementById("toggleBtn");
+let resMenu = document.getElementById(("res-menu"))
+
+toggleBtn.addEventListener("click", function () {
+    resMenu.classList.toggle("translate-y-[-100%]")
 })
+
+
+let loadingScreen = document.getElementById("loading");
+
+window.addEventListener("load", function () {
+    loadingScreen.classList.add("hidden")
+})
+
+

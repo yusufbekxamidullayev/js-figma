@@ -1,12 +1,22 @@
-let productCards = document.querySelector(".product-cards")
+let homeCards = document.getElementById("home-cards");
+let loadingScreen = document.getElementById("loading");
+let badge = document.getElementById("badge");
+let cart = [];
+let isExist;
 
-let FourProducts = products.slice(products.length - 36, products.length)
+badge.textContent = cart.length
 
-    .map(el => {
-        productCards.innerHTML += `
+function showProducts(content, data) {
+    console.log(isExist);
+    content.innerHTML = "";
+    
+
+
+    data.map((el) => {
+        content.innerHTML += `
         <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px] ">
                         <div class="relative">
-                            <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease" src="${el.images[2]}" alt="Молоко Простоквашино" class=" object-cover">
+                            <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease" src="${el.images[0]}" alt="Молоко Простоквашино" class=" object-cover">
                         </div>
                         <div class="p-4">
                             <h3 class="text-gray-600 text-lg">
@@ -65,16 +75,57 @@ let FourProducts = products.slice(products.length - 36, products.length)
                                 </div>` : ""
 
             }
-                            <button class="mt-[10px] w-full bg-green-600 hover:bg-[#FF6633] text-white font-semibold py-2 rounded transition-colors duration-500 ease-in-out">
+                            ${     isExist = cart.find((car) => car.id === el.id)  ? `
+                                  <div class="grid grid-cols-3 mt-[10px] w-full bg-green-600 rounded-[5px] hover:bg-[#FF6633] text-white font-semibold py-[2px] rounded  ">
+                                <button
+                                onClick="{decrease(${el.id})}"
+                                class="bg-green-600 text-[24px] text-[white] flex items-center justify-center">-</button>
+                                <span class="bg-green-600 text-[24px] text-[white] flex items-center justify-center" id="qty">${(cart.find((item) => item.id === el.id)).qty}</span>
+                                <button
+                                 onClick="increase(${el.id})"
+                                class="bg-green-600 text-[24px] text-[white] flex items-center justify-center">+</button>
+                            </div>
+                                ` : `
+                                  <button onClick="addToCart(${el.id})" class="mt-[10px] w-full bg-green-600 hover:bg-[#FF6633] text-white font-semibold py-2 rounded transition-colors ">
                                 <a href="">В корзину</a>
                             </button>
+                                `
+            }
+                            
+                            
                         </div>
                     </div>
         `
     })
 
+}
 
-let loadingScreen = document.getElementById("loading");
+showProducts(homeCards, products)
+
+
+function addToCart(id) {
+    let item = products.find((el) => el.id === id);
+    item.qty = 1;
+    cart.push(item);
+    badge.textContent = cart.length
+    showProducts(homeCards, products)
+}
+
+
+function increase(id){
+    let item = cart.find((el) => el.id === id);
+    item.qty += 1;
+    showProducts(homeCards, products)
+}
+
+function decrease(id){
+    let item = cart.find((el) => el.id === id);
+    item.qty -= 1;
+    if(item.qty <= 0){
+        cart = cart.filter((el) => el.id !== id)
+    }
+    showProducts(homeCards, products)
+}
 
 window.addEventListener("load", function () {
     loadingScreen.classList.add("hidden")
