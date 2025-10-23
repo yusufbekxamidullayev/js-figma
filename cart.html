@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    
-  
+
+
 
 
     <header class="shadow-sm ">
@@ -18,21 +20,21 @@
                 <div class="flex items-center gap-2">
                     <img src="/assets/image/logo.png" alt="yuz" class="w-8 h-8">
                 </div>
-    
+
                 <div
                     class="flex items-center border border-[#70C05B] relative rounded-md flex-grow max-w-[800px] mx-[10px]">
                     <input id="input" type="text" placeholder="Найти товар"
                         class="px-5 py-3 text-[18px] flex-grow min-w-0 outline-none border-none rounded-l-md">
                     <div
                         class="input-cards  w-full pl-[10px] absolute flex flex-col gap-[10px] top-[60px] bg-white border-[2px] border-gray-300 rounded-[10px] py-2 pr-10 max-h-[300px] overflow-y-auto ">
-    
+
                     </div>
                     <button class="px-3 rounded-r-md">
                         <img src="/assets/image/search.png" alt="search" class="w-6 h-6">
                     </button>
                 </div>
             </div>
-    
+
             <div
                 class="hidden lg:flex flex-wrap items-center justify-between py-4 gap-4 fixed top-0 left-0 right-0 bg-[white] z-[100] pl-[20px] pr-[20px]">
                 <div>
@@ -41,7 +43,7 @@
                         <h1 class="font-bold text-lg sm:text-xl">Северяночка</h1>
                     </a>
                 </div>
-    
+
                 <div>
                     <button id="toggleBtn"
                         class="flex items-center gap-2 rounded-md w-[140px] h-[40px] bg-[#70C05B] text-white justify-center">
@@ -51,19 +53,19 @@
                         </a>
                     </button>
                 </div>
-    
+
                 <div class="flex items-center border border-[#70C05B] relative rounded-md flex-grow max-w-[400px]">
                     <input id="search" type="text" placeholder="Найти товар"
                         class="px-5 py-3 text-[18px] flex-grow min-w-0 outline-none border-none rounded-l-md">
                     <div
                         class="search-cards w-full pl-[10px] absolute flex flex-col gap-[10px] top-[60px] bg-white border-[2px] border-gray-300 rounded-[10px] py-2 pr-10 max-h-[355px] overflow-y-auto ">
-    
+
                     </div>
                     <button class="px-3 rounded-r-md">
                         <img src="/assets/image/search.png" alt="search" class="w-6 h-6">
                     </button>
                 </div>
-    
+
                 <div class="flex items-center gap-6">
                     <div class="flex flex-col items-center">
                         <img src="/assets/image/yurak.png" alt="yurak" class="w-5 h-5">
@@ -81,7 +83,7 @@
                                 <img src="/assets/image/savat.png" alt="savat" class="w-5 h-5">
                                 <p id="badge"
                                     class="text-[12px] bg-[red] text-[white] h-[18px] w-[18px] items-center text-center rounded-[100px]">
-                                    </p>
+                                </p>
                             </div>
                             <div>
                                 <p class="text-xs">Корзина</p>
@@ -89,7 +91,7 @@
                         </a>
                     </div>
                 </div>
-    
+
                 <div class="flex items-center gap-2">
                     <img src="/assets/image/avatar (1).png" alt="avatar" class="w-8 h-8 rounded-full">
                     <p class="text-sm sm:text-base text-[#232323]">Алексей</p>
@@ -99,13 +101,25 @@
     </header>
 
     <main>
-       
+        <section class="pt-[120px]">
+            <div class="container mx-auto">
+                <h1 class="sm:ml-[20px] text-[36px] text-[#414141] font-bold lg:pl-[0px]">Все продукты</h1>
+                <div class="pt-[50px]">
+                    <div id="carts-cards"
+                        class="grid grid-cols-1 items-center justify-center text-center md:grid md:grid-cols-1 mx-[10px] lg:grid-cols-1 xl:grid xl:grid-cols-1">
+
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 
     <script src="/js/products-data.js"></script>
+    <script src="/js/cards.js"></script>
     <script src="/js/cart.js"></script>
     <script src="/js/card.js"></script>
     <script src="/js/main.js"></script>
 </body>
+
 </html>
