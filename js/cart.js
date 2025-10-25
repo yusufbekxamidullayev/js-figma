@@ -1,7 +1,9 @@
-let cartsCards = document.getElementById("carts-cards");
-
+let cartsCards = document.querySelector(".carts-cards");
+let carts = JSON.parse(localStorage.getItem("cart") || "[]");
+let isExist = false;
 
 function showCartProducts(content, data) {
+    content.innerHTML= "";
     data.map((el) => {
         content.innerHTML += `
        <div class="max-w-[900px] w-full bg-white shadow overflow-hidden mt-[30px] ">
@@ -20,12 +22,12 @@ function showCartProducts(content, data) {
                                 <span class="text-xl font-bold text-gray-900 mr-2">${el.price}₽</span>
                             </div>
                             
-                            ${isExist = cart.find((car) => car.id === el.id) ? `
+                            ${isExist = carts.find((car) => car.id === el.id) ? `
                                   <div class="grid grid-cols-3 mt-[10px] w-[100px] h-[40px] bg-green-600 rounded-[5px] hover:bg-[#FF6633] text-white font-semibold py-[2px] rounded  ">
                                 <button
                                 onClick="{decrease(${el.id})}"
                                 class="bg-green-600 text-[24px] text-[white] flex items-center justify-center">-</button>
-                                <span class="bg-green-600 text-[24px] text-[white] flex items-center justify-center" id="qty">${(cart.find((item) => item.id === el.id)).qty}</span>
+                                <span class="bg-green-600 text-[24px] text-[white] flex items-center justify-center" id="qty">${(carts.find((item) => item.id === el.id)).qty}</span>
                                 <button
                                  onClick="increase(${el.id})"
                                 class="bg-green-600 text-[24px] text-[white] flex items-center justify-center">+</button>
@@ -47,22 +49,22 @@ function showCartProducts(content, data) {
 
 }
 
-showCartProducts(cartsCards , cart)
+showCartProducts(cartsCards , carts)
 
 function increase(id) {
-    let item = cart.find((el) => el.id === id);
+    let item = carts.find((el) => el.id === id);
     item.qty += 1;
-    localStorage.setItem("cart", JSON.stringify(cart));
-    showProducts(cartsCards, cart)
+    localStorage.setItem("cart", JSON.stringify(carts));
+    showProducts(cartsCards, carts)
 }
 
 function decrease(id) {
-    let item = cart.find((el) => el.id === id);
+    let item = carts.find((el) => el.id === id);
     item.qty -= 1;
     if (item.qty <= 0) {
-        cart = cart.filter((el) => el.id !== id)
-        localStorage.setItem("cart", JSON.stringify(cart));
+        carts = carts.filter((el) => el.id !== id)
+        localStorage.setItem("cart", JSON.stringify(carts));
     }
-    badge.textContent = cart.length;
-    showProducts(cartsCards, cart)
+    badge.textContent = carts.length;
+    showProducts(cartsCards, carts)
 }

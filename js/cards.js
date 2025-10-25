@@ -12,11 +12,7 @@ localStorage.setItem("cart", JSON.stringify(cart));
 badge.textContent = cart.length
 
 function showProducts(content, data) {
-    console.log(isExist);
     content.innerHTML = "";
-
-
-
     data.map((el) => {
         content.innerHTML += `
         <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px] ">
