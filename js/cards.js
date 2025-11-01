@@ -15,7 +15,7 @@ function showProducts(content, data) {
     content.innerHTML = "";
     data.map((el) => {
         content.innerHTML += `
-        <div class="max-w-[300px] w-full h-[390px] bg-white rounded-lg shadow overflow-hidden mt-[30px] ">
+        <div class="max-w-[300px] w-full  bg-white rounded-lg shadow overflow-hidden mt-[30px] ">
                         <div class="relative">
                         <a href="/товар.html">
                              <img class="w-full aspect-video object-cover transform hover:scale-110 transition-transform duration-300 ease" src="${el.images[0]}" alt="Молоко Простоквашино" class=" object-cover">
